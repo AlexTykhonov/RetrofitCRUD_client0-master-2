@@ -69,7 +69,7 @@ public class BookActivity extends AppCompatActivity {
                 book.setDescription(editFormDescription.getText().toString());
                 book.setPublished(Integer.parseInt(editFormPublishDate.getText().toString()));
 
-                if(bookId!=null && bookId.trim().length()>0){
+                if(bookId!=null && bookId.trim().length()>0&&(Integer.parseInt(bookId)!=0)){
                     updateBook(Integer.parseInt(bookId), book);
                 } else{
                     addBook(book);
@@ -111,7 +111,7 @@ public class BookActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Book> call, Response<Book> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(BookActivity.this, "Book updated succesful! " + book.getId(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BookActivity.this, "Book updated successful! " + book.getId(), Toast.LENGTH_SHORT).show();
                 }
             }
 
