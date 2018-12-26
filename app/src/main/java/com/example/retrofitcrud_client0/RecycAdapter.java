@@ -77,7 +77,7 @@ public class RecycAdapter extends RecyclerView.Adapter<RecycAdapter.ViewHolder> 
         bookArrayList.clear();
         bookArrayList.addAll(setBookList);
          notifyDataSetChanged();
-
+// latest update
         }
 
 }
